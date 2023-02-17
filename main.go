@@ -12,12 +12,7 @@ type user struct {
 }
 
 func (u user) String() string {
-	return fmt.Sprintf(""+
-		"{\n"+
-		"  name: %v,\n"+
-		"  age: %d,\n"+
-		"  email: %v "+
-		"\n}", u.name, u.age, u.email)
+	return fmt.Sprintf("%+v", u)
 }
 
 func searchAndPrint(users []user, name string) {
